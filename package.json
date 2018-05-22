@@ -1,0 +1,19 @@
+{
+  "name": "my-react-clone",
+  "version": "1.0.0",
+  "description": "My own react implementation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leouo/my-react-clone.git"
+  },
+  "author": "Leonardo Cesar Morais",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leouo/my-react-clone/issues"
+  },
+  "homepage": "https://github.com/leouo/my-react-clone#readme"
+}
