@@ -1,14 +1,14 @@
 const setAttribute = (dom, key, value) => {
     if (typeof value == 'function' && key.startsWith('on')) {
         const eventType = key.slice(2).toLowerCase();
-        dom.__gooactHandlers = dom.__gooactHandlers || {};
-        dom.removeEventListener(eventType, dom.__gooactHandlers[eventType]);
-        dom.__gooactHandlers[eventType] = value;
-        dom.addEventListener(eventType, dom.__gooactHandlers[eventType]);
+        dom.__Handlers = dom.__Handlers || {};
+        dom.removeEventListener(eventType, dom.__Handlers[eventType]);
+        dom.__Handlers[eventType] = value;
+        dom.addEventListener(eventType, dom.__Handlers[eventType]);
     } else if (key == 'checked' || key == 'value' || key == 'id') {
         dom[key] = value;
     } else if (key == 'key') {
-        dom.__gooactKey = value;
+        dom.__Key = value;
     } else if (typeof value != 'object' && typeof value != 'function') {
         dom.setAttribute(key, value);
     }

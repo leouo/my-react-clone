@@ -1,8 +1,8 @@
-const myComponent = createElement('div', {class: 'my-app'}, 'Hello world');
-const myNewComponentVersion = createElement('div', { class: 'my-app' },
-    createElement('span', {}, 'Xablau!')
-);
+class MyApp extends Component {
+    render() {
+        return createElement('div', {}, 'Hello World!');
+    }
+}
 
-const MyApp = render(myComponent, document.getElementById('app'));
 
-patch(MyApp, myNewComponentVersion);
+render(createElement(MyApp, null), document.getElementById('app'));
